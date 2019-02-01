@@ -10,11 +10,18 @@ export class ShoppingListService {
 
  constructor(private db: AngularFireDatabase) {}
  
- getShoppingList() {
+ getShoppingList() 
+ {
   return this.shoppingListRef;
  }
 
- additem(item: Item) {
+ addItem(item: Item) 
+ {
   return this.shoppingListRef.push(item);
+ }
+
+ editItem(item: Item) 
+ {
+  return this.shoppingListRef.update(item.key, item);
  }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 import { ShoppingListService } from '../../services/shopping-list/shopping-list.service';
-import { Observable } from 'rxjs'; 
+import { Observable } from 'rxjs/Observable'; 
 import 'rxjs/add/operator/map';
 import { Item } from '../../models/item/item.model';
 
