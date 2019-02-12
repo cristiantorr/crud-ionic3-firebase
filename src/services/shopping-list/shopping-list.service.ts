@@ -24,4 +24,9 @@ export class ShoppingListService {
  {
   return this.shoppingListRef.update(item.key, item);
  }
+
+ removeItem(Item: Item) 
+ {
+    return this.shoppingListRef.remove(Item.key);
+ }
 }

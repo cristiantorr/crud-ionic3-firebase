@@ -20,15 +20,24 @@ export class EditShoppingItemPage {
     private toast: ToastService
     ) {}
 
-  ionViewWillLoad() {
+  ionViewWillLoad() 
+  {
     this.item = this.navParams.get('item');
   }
 
-  saveItem(item: Item) {
+  saveItem(item: Item) 
+  {
     this.shopping.editItem(item).then(() => {
-      this.toast.show(`${item.name} saved!`, )
+      this.toast.show(`${item.name} saved!`);
       this.navCtrl.setRoot('HomePage');
     })
   }
 
+  removeItem(item: Item)
+  {
+    this.shopping.removeItem(item).then(()=> {
+      this.toast.show(`${item.name} deleted!` );
+      this.navCtrl.setRoot('HomePage');
+    })
+  }
 }
